@@ -67,6 +67,8 @@ Route::middleware('auth')->group(function () {
         Route::put('service-records/{serviceRecord}', [ServiceRecordController::class, 'update'])->name('service-records.update');
         Route::delete('service-records/{serviceRecord}', [ServiceRecordController::class, 'destroy'])->name('service-records.destroy');
         Route::get('reports', [ReportController::class, 'index'])->name('reports.index');
+        Route::get('reports/export/csv', [ReportController::class, 'exportCsv'])->name('reports.export.csv');
+        Route::get('reports/export/pdf', [ReportController::class, 'exportPdf'])->name('reports.export.pdf');
     });
 
     Route::middleware('role:admin')->group(function () {

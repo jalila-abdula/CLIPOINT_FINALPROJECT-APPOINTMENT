@@ -85,6 +85,20 @@
                 </article>
             </section>
 
+            <section class="reports-panel">
+                <div class="reports-section-head">
+                    <div>
+                        <h2 class="reports-panel-title">Export Reports</h2>
+                        <p class="reports-section-copy">Download the current report summary as CSV or formatted PDF.</p>
+                    </div>
+
+                    <div class="page-actions">
+                        <a href="{{ route('reports.export.csv') }}" class="btn-secondary">Export CSV</a>
+                        <a href="{{ route('reports.export.pdf') }}" class="btn-primary">Export PDF</a>
+                    </div>
+                </div>
+            </section>
+
             <section class="reports-grid">
                 <article class="reports-panel">
                     <h2 class="reports-panel-title">Monthly Appointment Trend</h2>
